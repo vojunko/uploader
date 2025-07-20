@@ -283,7 +283,7 @@ function checkVideoDuration(file) {
     video.onloadedmetadata = function () {
       URL.revokeObjectURL(video.src);
       const duration = video.duration;
-      resolve(duration <= 30);
+      resolve(duration <= 120);
     };
     video.src = URL.createObjectURL(file);
   });
